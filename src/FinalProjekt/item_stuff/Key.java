@@ -1,6 +1,5 @@
 package FinalProjekt.item_stuff;
 
-import java.awt.*;
 import java.util.Hashtable;
 
 public class Key extends Item{

@@ -1,9 +1,6 @@
 package FinalProjekt.chapters;
 
-import FinalProjekt.GUI.MainGUI;
-import FinalProjekt.item_stuff.Door;
 import FinalProjekt.item_stuff.Inventory;
-import FinalProjekt.item_stuff.Item;
 
 public abstract class Story {
 

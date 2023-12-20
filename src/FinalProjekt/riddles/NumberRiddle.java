@@ -1,10 +1,7 @@
 package FinalProjekt.riddles;
 
 import java.io.BufferedReader;
-import java.io.IOException;
 import java.io.InputStreamReader;
-
-import FinalProjekt.item_stuff.*;
 
 public class NumberRiddle extends RiddleType {
     double answer;

@@ -1,12 +1,7 @@
 package FinalProjekt.chapters;
 
-import java.awt.*;
-import java.util.Hashtable;
-
 import FinalProjekt.GUI.MainGUI;
 import FinalProjekt.chapterTexts.ChapterTexts;
-import FinalProjekt.item_stuff.*;
-import FinalProjekt.riddles.*;
 import javafx.scene.paint.Color;
 
 public abstract class Chapter1 {
@@ -25,7 +20,7 @@ public abstract class Chapter1 {
             MainGUI.setTypingText(ChapterTexts.chapter1part2 , Color.BLACK);
             countInsideChapter++;
         } else if (countInsideChapter == 2) {
-            MainGUI.setTypingText("Wenn ihr mich umdreht, bin ich genau das Gegenteil von dem, was ich war. Wer bin ich? (Verwende das Symbol oben rechts, um eine Antwort einzugeben)", Color.BLACK);
+            MainGUI.setTypingText("Wenn ihr mich umdreht, bin ich nicht mehr das, was ich war. Wer bin ich? (Verwende das Symbol oben rechts, um eine Antwort einzugeben)", Color.BLACK);
             countInsideChapter++;
         } else if (countInsideChapter == 3) {
             if (MainGUI.textField.getText().equals("6") || MainGUI.textField.getText().equals("9")) {

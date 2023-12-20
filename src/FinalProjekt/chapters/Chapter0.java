@@ -2,7 +2,6 @@ package FinalProjekt.chapters;
 
 import FinalProjekt.GUI.MainGUI;
 import FinalProjekt.chapterTexts.ChapterTexts;
-import javafx.application.Application;
 import javafx.scene.paint.Color;
 
 public class Chapter0 {

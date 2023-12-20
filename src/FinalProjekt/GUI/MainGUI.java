@@ -1,28 +1,27 @@
 package FinalProjekt.GUI;
 
-import FinalProjekt.chapters.Chapter3;
 import FinalProjekt.chapters.Story;
 import FinalProjekt.item_stuff.Inventory;
 import FinalProjekt.item_stuff.Item;
-import javafx.animation.*;
+import javafx.animation.Animation;
+import javafx.animation.KeyFrame;
+import javafx.animation.PauseTransition;
+import javafx.animation.Timeline;
 import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.ScrollPane;
+import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.StackPane;
 import javafx.scene.layout.VBox;
-import javafx.scene.control.ScrollPane;
 import javafx.scene.paint.Color;
-import javafx.scene.shape.Rectangle;
 import javafx.scene.text.Font;
 import javafx.scene.text.Text;
-import javafx.scene.text.TextFlow;
 import javafx.stage.Stage;
 import javafx.util.Duration;
-import javafx.scene.control.TextField;
-
 
 import java.util.ArrayList;
 import java.util.List;
@@ -79,7 +78,7 @@ public class MainGUI extends Application {
 
         Image keyboardIconImage = new Image("FinalProjekt/images/keyboardWhite.png");
         Image keyboardIconImageBlack = new Image("FinalProjekt/images/keyboard.png");
-        Image[] keyboardImages = {keyboardIconImage,keyboardIconImageBlack};
+        Image[] keyboardImages = {keyboardIconImage, keyboardIconImageBlack};
         ImageView backgroundImageView = new ImageView(backgroundImages[0]);
 
         // Create an ImageView to display the background image
