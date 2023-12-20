@@ -11,6 +11,7 @@ import javafx.application.Application;
 import javafx.geometry.Pos;
 import javafx.scene.Scene;
 import javafx.scene.control.Button;
+import javafx.scene.control.Label;
 import javafx.scene.control.ScrollPane;
 import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
@@ -22,6 +23,9 @@ import javafx.scene.text.Font;
 import javafx.scene.text.Text;
 import javafx.stage.Stage;
 import javafx.util.Duration;
+import java.util.Timer;
+import java.util.TimerTask;
+import javafx.application.Platform;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -35,6 +39,10 @@ public class MainGUI extends Application {
     private Inventory playerInventory = new Inventory();
     private boolean isInventoryOpen = false;
     public static TextField textField = new TextField();
+
+    private Timeline timeline;
+    private Label timerLabel;
+    private int remainingTime = 3600; // 3600 Sekunden = 1 Stunde
 
     public static void setTypingText(String text, Color color) {
         MainGUI.typingText.setText(text);
@@ -66,6 +74,9 @@ public class MainGUI extends Application {
     public void start(Stage primaryStage) {
         // Set the title of the window
         primaryStage.setTitle("Prescoom");
+
+        timerLabel = new Label(formatTime(remainingTime));
+        timerLabel.setStyle("-fx-font-size: 20px;");
 
         // Load the background image
         Image backgroundImageStart = new Image("FinalProjekt/images/start1.png");
@@ -213,6 +224,10 @@ public class MainGUI extends Application {
         StackPane.setAlignment(continueButton, Pos.BOTTOM_RIGHT);
         StackPane.setAlignment(textFieldToggleButton, Pos.TOP_RIGHT);
         StackPane.setAlignment(inventoryBookButton, Pos.CENTER_LEFT);
+        StackPane.setAlignment(timerLabel, Pos.CENTER_RIGHT); // Positionierung mittig rechts
+        root.getChildren().add(timerLabel);
+
+        startTimer();
 
         // Bind the size of the backgroundImageView to the size of the root layout
         backgroundImageView.fitWidthProperty().bind(root.widthProperty());
@@ -325,6 +340,29 @@ public class MainGUI extends Application {
 
         Item potionItem = new Item(2, "Potion", playerInventory);
         playerInventory.addItem(potionItem);
+    }
+
+    private void startTimer() {
+        timeline = new Timeline(new KeyFrame(Duration.seconds(1), e -> updateTimer()));
+        timeline.setCycleCount(Timeline.INDEFINITE);
+        timeline.play();
+    }
+
+    private void updateTimer() {
+        remainingTime--;
+        timerLabel.setText(formatTime(remainingTime));
+
+        if (remainingTime <= 0) {
+            timeline.stop();
+            timerLabel.setText("Time's up!");
+        }
+    }
+
+    private String formatTime(int totalSeconds) {
+        int hours = totalSeconds / 3600;
+        int minutes = (totalSeconds % 3600) / 60;
+        int seconds = totalSeconds % 60;
+        return String.format("%02d:%02d:%02d", hours, minutes, seconds);
     }
 
 }

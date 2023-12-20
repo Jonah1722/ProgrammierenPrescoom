@@ -7,7 +7,7 @@ public class ChapterTexts {
     // nach anklicken des Buches erscheint der Text: und danach direkt das Rätsel
     public static String chapter1part2 = "Ihr öffnet das seltsame Buch und entdeckt einige kuriose Fragen, von denen ihr vermutet, sie können euch beim entkommen helfen:";
     //alle Rätsel gelöst, Übergang in das zweite Chapter:
-    public static String chapter2part1 = "Nachdem ihr das Rätsel gelöst habt, öffnet sich auf einmal die verschlossene Tür. Ihr lauft in den Flur und tief im Inneren des Gebäudes findet ihr ein verriegeltes Büro, dessen Tür mit einem alten Zahlenschloss verschlossen ist. Ihr müsst die mysteriösen Rätsel entschlüsseln und das Schloss rich-tig einstellen, um Zugang zum Büro zu erhalten. Doch seid vorsichtig, ein falscher Schritt könnte gefährliche Fallen auslösen.";
+    public static String chapter2part1 = "Nachdem ihr das Rätsel gelöst habt, öffnet sich auf einmal die verschlossene Tür. Ihr lauft in den Flur und tief im Inneren des Gebäudes findet ihr ein verriegeltes Büro, dessen Tür mit einem alten Zahlenschloss verschlossen ist. Ihr müsst die mysteriösen Rätsel entschlüsseln und das Schloss richtig einstellen, um Zugang zum Büro zu erhalten. Doch seid vorsichtig, ein falscher Schritt könnte gefährliche Fallen auslösen.";
     // Rätsel gelöst, Eintritt in den nächsten Raum und nächstes Chapter:
     public static String chapter3part1 = "In dem geheimen Büro liegt ein Schlüssel";
     //nach anklicken von Schriftrolle:
